@@ -1,0 +1,162 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Cart | AgroFarm</title>
+    <link rel="stylesheet" href="cart.css">
+    <script src="cart.js" defer></script>
+</head>
+<body>
+
+<header class="navbar">
+    <a href="index.html" class="logo">Agro<span>Farm</span></a>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="About us.html">About Us</a>
+        <a href="Our Services.html">Our Services</a>
+        <a href="Product.html">Products</a>
+        <a href="cart.html" class="active">My Cart</a>
+    </nav>
+</header>
+
+<section class="page-heading">
+    <h1>My Shopping Cart</h1>
+    <p>Review your farm products before checkout.</p>
+</section>
+
+<main class="container">
+
+    <section class="cart-section">
+        <div class="section-title">
+            <h2>Your Items</h2>
+            <span id="itemCount">0 items</span>
+        </div>
+
+        <div id="cartItems"></div>
+
+        <div id="emptyCart" class="empty-cart">
+            <h2>Your cart is empty</h2>
+            <p>You haven't added any products yet.</p>
+            <a href="product.html" class="shop-btn">Continue Shopping</a>
+        </div>
+    </section>
+
+    <section class="checkout-section">
+
+        <div class="checkout-form">
+            <h2>Delivery Information</h2>
+
+            <form id="checkoutForm">
+
+                <label>Full Name</label>
+                <input type="text" id="customerName" required
+                placeholder="Enter your full name">
+
+                <label>Email Address</label>
+                <input type="email" id="customerEmail" required
+                placeholder="Enter your email">
+
+                <label>Phone Number</label>
+                <input type="tel" id="customerPhone" required
+                placeholder="Enter your phone number">
+
+                <label>Delivery Address</label>
+                <textarea id="customerAddress" required
+                placeholder="Enter your full delivery address"></textarea>
+
+                <label>City</label>
+                <input type="text" id="customerCity" required
+                placeholder="Enter your city">
+
+                <label>State</label>
+                <input type="text" id="customerState" required
+                placeholder="Enter your state">
+
+                <h2 class="payment-heading">Bank Transfer</h2>
+
+                <p class="payment-description">
+                    Transfer the total amount to the account below.
+                    Then enter your transfer reference before placing
+                    your order.
+                </p>
+
+                <div class="bank-details">
+                    <h3>AgroFarm Bank Account</h3>
+
+                    <p>Bank Name: <strong>Moniepoint</strong></p>
+
+                    <p>Account Name:
+                        <strong>Donald Davies</strong>
+                    </p>
+
+                    <p>Account Number:
+                        <strong id="accountNumber">9043320627</strong>
+                    </p>
+
+                    <button type="button" id="copyAccount"
+                    class="copy-btn">
+                        Copy Account Number
+                    </button>
+                </div>
+
+                <label>Transfer Reference</label>
+                <input type="text" id="transferReference" required
+                placeholder="Enter your bank transfer reference">
+
+                <p class="payment-warning">
+                    Your order will remain pending until your
+                    payment is confirmed.
+                </p>
+
+                <button type="submit" id="placeOrder"
+                class="place-order-btn">
+                    Place Order
+                </button>
+
+            </form>
+        </div>
+
+        <aside class="order-summary">
+            <h2>Order Summary</h2>
+
+            <div class="summary-row">
+                <span>Items</span>
+                <span id="summaryCount">0</span>
+            </div>
+
+            <div class="summary-row">
+                <span>Subtotal</span>
+                <span id="subtotal">₦0</span>
+            </div>
+
+            <div class="summary-row">
+                <span>Delivery</span>
+                <span>To be confirmed</span>
+            </div>
+
+            <hr>
+
+            <div class="total-row">
+                <strong>Total</strong>
+                <strong id="grandTotal">₦0</strong>
+            </div>
+
+            <p class="summary-note">
+                Delivery charges will be confirmed with you
+                before your order is dispatched.
+            </p>
+        </aside>
+
+    </section>
+
+</main>
+
+<footer>
+    <p>© 2026 AgroFarm. Grow More. Live Better.</p>
+</footer>
+
+</body>
+</html>

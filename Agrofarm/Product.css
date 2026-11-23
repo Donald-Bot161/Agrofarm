@@ -1,0 +1,530 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #17251c;
+    background: #fff;
+}
+.navbar {
+    background: #ff4b00;
+    padding: 20px 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    color: white;
+    font-size: 23px;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.nav-links a:hover,
+.nav-links .active {
+    color: #baff73;
+}
+
+.contact-btn {
+    background: #168b24;
+    color: white;
+    padding: 12px 23px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* HERO */
+.product-hero {
+    height: 280px;
+    background:
+    linear-gradient(90deg, rgba(0,0,0,.6), transparent),
+    url("https://images.unsplash.com/photo-1500382017468-9049fed747ef")
+    center/cover;
+    display: flex;
+    align-items: center;
+    padding: 5%;
+}
+
+.hero-content h1 {
+    color: white;
+    font-size: 52px;
+    margin-bottom: 12px;
+}
+
+.hero-content h1 span {
+    color: #70df35;
+}
+
+.hero-content p {
+    color: white;
+    font-size: 19px;
+}
+
+/* PRODUCT INTRO */
+.product-intro {
+    padding: 50px 5% 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+.small-title {
+    color: #168b24;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.product-intro h2 {
+    font-size: 34px;
+    margin: 12px 0;
+}
+
+.product-intro p {
+    color: #666;
+    line-height: 1.7;
+    max-width: 600px;
+}
+
+.quality-box {
+    background: #edf8df;
+    padding: 22px 28px;
+    border-radius: 16px;
+}
+
+.quality-box p {
+    color: #17251c;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.quality-box p:last-child {
+    margin-bottom: 0;
+}
+
+/* PRODUCTS GRID */
+.products-grid {
+    padding: 15px 5% 50px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.product-card {
+    background: white;
+    border: 1px solid #e5e9e4;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 5px 18px rgba(0,0,0,.05);
+    transition: .3s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,.1);
+}
+
+.product-card img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+    padding: 10px;
+}
+
+.product-info {
+    padding: 15px 18px 20px;
+}
+
+.product-info h3 {
+    font-size: 17px;
+    margin-bottom: 8px;
+}
+
+.price {
+    color: #168b24;
+    font-size: 19px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.cart-btn {
+    background: #168b24;
+    color: white;
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    transition: .3s;
+}
+
+.cart-btn:hover {
+    background: #0d6818;
+}
+
+/* FOOTER */
+footer {
+    background: #101b19;
+    color: white;
+    padding: 40px 5% 20px;
+    display: grid;
+    grid-template-columns: 1.3fr 1fr 1.3fr 1fr;
+    gap: 30px;
+}
+
+footer h3 {
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+footer a {
+    display: block;
+    color: #ddd;
+    text-decoration: none;
+    margin-bottom: 10px;
+    font-size: 13px;
+}
+
+footer p {
+    color: #ddd;
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+
+.footer-brand h2,
+.footer-brand p {
+    color: #70df35;
+}
+
+.copyright {
+    grid-column: 1 / -1;
+    border-top: 1px solid #444;
+    padding-top: 18px;
+    font-size: 12px;
+    text-align: center;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .nav-links {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .nav-links a {
+        font-size: 13px;
+    }
+
+    .product-hero {
+        height: 230px;
+    }
+
+    .hero-content h1 {
+        font-size: 38px;
+    }
+
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .product-intro {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    footer {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .products-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .product-intro h2 {
+        font-size: 28px;
+    }
+
+    footer {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ================= AGROFARM CART MODAL ================= */
+
+.cart-modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 25, 12, 0.65);
+    backdrop-filter: blur(5px);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+    z-index: 9999;
+
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s ease;
+}
+
+.cart-modal.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.cart-modal-content {
+    background: #ffffff;
+    width: 100%;
+    max-width: 440px;
+
+    padding: 40px 30px;
+    border-radius: 18px;
+
+    text-align: center;
+    position: relative;
+
+    transform: translateY(30px);
+    transition: 0.3s ease;
+
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
+}
+
+.cart-modal.active .cart-modal-content {
+    transform: translateY(0);
+}
+
+.modal-close {
+    position: absolute;
+    top: 15px;
+    right: 18px;
+
+    border: none;
+    background: none;
+
+    font-size: 30px;
+    color: #777;
+    cursor: pointer;
+}
+
+.modal-icon {
+    width: 65px;
+    height: 65px;
+
+    background: #e5f8df;
+    color: #159b35;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+    font-size: 35px;
+    font-weight: bold;
+
+    margin: 0 auto 20px;
+}
+
+.modal-label {
+    color: #159b35;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.cart-modal-content h2 {
+    color: #142c20;
+    font-size: 27px;
+    margin: 12px 0;
+}
+
+.modal-description {
+    color: #68756c;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.modal-product-box {
+    background: #f3f8f0;
+    border: 1px solid #e1edda;
+
+    padding: 15px;
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    text-align: left;
+}
+
+.modal-product-box span {
+    color: #758078;
+    font-size: 12px;
+}
+
+.modal-product-box strong {
+    color: #183d26;
+    font-size: 16px;
+}
+
+.modal-total {
+    color: #526057;
+    margin: 20px 0;
+    font-size: 14px;
+}
+
+.modal-total strong {
+    color: #159b35;
+    font-size: 18px;
+}
+
+.modal-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.continue-btn,
+.view-cart-btn {
+    width: 100%;
+    padding: 14px;
+
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+
+    transition: 0.3s ease;
+}
+
+.continue-btn {
+    background: #159b35;
+    color: white;
+    border: none;
+}
+
+.continue-btn:hover {
+    background: #087b25;
+}
+
+.view-cart-btn {
+    background: #fff;
+    color: #159b35;
+    border: 1px solid #159b35;
+}
+
+.view-cart-btn:hover {
+    background: #eaf7e7;
+}
+
+.modal-footer-text {
+    color: #89938b;
+    font-size: 12px;
+    margin-top: 25px;
+}
+
+body.modal-open {
+    overflow: hidden;
+}
+
+/* Added button appearance */
+
+.cart-btn.added {
+    background: #159b35;
+    color: white;
+}
+
+/* Responsive modal */
+
+@media (max-width: 480px) {
+
+    .cart-modal-content {
+        padding: 35px 20px;
+    }
+
+    .cart-modal-content h2 {
+        font-size: 23px;
+    }
+
+}
+
+/* ================= PRODUCT QUANTITY COUNTER ================= */
+
+.quantity-control {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+
+    margin: 15px 0;
+}
+
+.quantity-control button {
+    width: 35px;
+    height: 35px;
+
+    border: none;
+    border-radius: 8px;
+
+    background: #e8f5e9;
+    color: #159b35;
+
+    font-size: 22px;
+    font-weight: bold;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.quantity-control button:hover {
+    background: #159b35;
+    color: white;
+}
+
+.product-quantity {
+    font-size: 17px;
+    font-weight: bold;
+    color: #193326;
+
+    min-width: 20px;
+    text-align: center;
+}
+
+.cart-btn {
+    cursor: pointer;
+}
